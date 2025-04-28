@@ -537,60 +537,6 @@ p, .about-text p {
         font-size: 0.9em;
     }
 }
-p
-/* Skills Section */
-#skills {
-    padding: 40px 20px;
-    max-width: 1000px;
-}
-
-#skills ul, .skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 0;
-    list-style: none;
-    justify-content: center;
-    max-width: 800px;
-    margin: 20px auto;
-    animation: fadeInUp 1s ease-out 0.4s;
-    animation-fill-mode: backwards;
-}
-
-#skills li, .skills-list li {
-    background: var(--card-bg);
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px var(--shadow-color);
-    font-size: 1.1em;
-    font-weight: 500;
-    color: var(--text-color);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-#skills li:hover, .skills-list li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 114, 255, 0.2);
-}
-
-#skills li::before, .skills-list li::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 198, 255, 0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-    z-index: -1;
-}
 
 /* Featured Projects Section (Home Page) */
 #projects .projects-container {
@@ -1609,642 +1555,6 @@ p
     opacity: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #projects .projects-container {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-    }
-
-    .project-box {
-        max-width: 300px;
-        height: 360px;
-    }
-
-    .project-box img.slider-image {
-        height: 140px;
-    }
-
-    .project-box h3 {
-        font-size: 1.4em;
-        margin: 12px 15px 8px;
-    }
-
-    .project-box p {
-        font-size: 0.95em;
-        margin: 0 15px 12px;
-        -webkit-line-clamp: 2;
-    }
-
-    .project-links {
-        margin: 0 15px 15px;
-    }
-
-    .project-box .btn {
-        padding: 8px 18px;
-        font-size: 0.9em;
-    }
-
-    .see-all-btn .btn {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    .slider-image {
-        height: 140px;
-    }
-
-    .slide-caption {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: var(--nav-height);
-        left: -100%;
-        width: 80%;
-        height: calc(100vh - var(--nav-height));
-        background: var(--nav-bg);
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        transition: left 0.3s ease;
-        gap: 30px;
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-link {
-        font-size: 1.2em;
-        padding: 10px 20px;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .navbar.scrolled {
-        height: var(--nav-height);
-    }
-
-    section, .project-box, .service-card, .about-section, .services-section, #customer-messages, #contact-replies {
-        padding: 40px 15px;
-        max-width: 100%;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto 40px;
-    }
-
-    .project-card {
-        max-width: 100%;
-    }
-
-    h2, .about-text h2 {
-        font-size: 2.2em;
-    }
-
-    h3, .about-text h3 {
-        font-size: 1.5em;
-    }
-
-    p, .about-text p {
-        font-size: 1em;
-    }
-
-    #hero {
-        padding: 60px 20px;
-    }
-
-    #hero h1 {
-        font-size: 2em;
-    }
-
-    #hero h2 {
-        font-size: 1.5em;
-    }
-
-    .profile-img {
-        width: 200px;
-        height: 200px;
-    }
-
-    #skills ul, .skills-list {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 15px;
-    }
-
-    #skills li, .skills-list li {
-        font-size: 1em;
-        padding: 12px;
-    }
-
-    .about-text p.social-links a {
-        font-size: 1.1em;
-        padding: 8px 15px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .footer-heading::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .contact-info p {
-        justify-content: center;
-    }
-
-    .footer-link:hover {
-        transform: none;
-    }
-
-    #projects .projects-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .project-box {
-        max-width: 100%;
-        min-width: 0;
-        height: 340px;
-    }
-
-    .project-box img.slider-image {
-        height: 130px;
-    }
-
-    .project-box h3 {
-        font-size: 1.3em;
-        margin: 10px 15px 6px;
-    }
-
-    .project-box p {
-        font-size: 0.9em;
-        margin: 0 15px 10px;
-        -webkit-line-clamp: 2;
-    }
-
-    .project-links {
-        margin: 0 15px 15px;
-    }
-
-    .project-box .btn {
-        padding: 7px 16px;
-        font-size: 0.85em;
-    }
-
-    .see-all-btn .btn {
-        padding: 8px 18px;
-        font-size: 0.95em;
-    }
-
-    .slider-image {
-        height: 130px;
-    }
-
-    .slide-caption {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .slick-prev, 
-    .slick-next {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    section, .project-box, .service-card, .about-section, .services-section, #customer-messages, #contact-replies {
-        padding: 30px 10px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    h2, .about-text h2 {
-        font-size: 1.8em;
-    }
-
-    h3, .about-text h3 {
-        font-size: 1.3em;
-    }
-
-    p, .about-text p {
-        font-size: 0.9em;
-    }
-
-    #hero {
-        padding: 40px 15px;
-    }
-
-    #hero h1 {
-        font-size: 1.8em;
-    }
-
-    #hero h2 {
-        font-size: 1.3em;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    #skills ul, .skills-list {
-        grid-template-columns: 1fr;
-    }
-
-    #skills li, .skills-list li {
-        font-size: 0.9em;
-        padding: 10px;
-    }
-
-    .about-text p.social-links a {
-        font-size: 1em;
-        padding: 7px 12px;
-    }
-
-    #projects .projects-container {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .project-box {
-        max-width: 100%;
-        min-width: 0;
-        height: 320px;
-    }
-
-    .project-box img.slider-image {
-        height: 120px;
-    }
-
-    .project-box h3 {
-        font-size: 1.2em;
-        margin: 8px 12px 5px;
-    }
-
-    .project-box p {
-        font-size: 0.85em;
-        margin: 0 12px 8px;
-        -webkit-line-clamp: 2;
-    }
-
-    .project-links {
-        margin: 0 12px 12px;
-    }
-
-    .project-box .btn {
-        padding: 6px 14px;
-        font-size: 0.8em;
-    }
-
-    .see-all-btn .btn {
-        padding: 7px 16px;
-        font-size: 0.9em;
-    }
-
-    .slider-image {
-        height: 120px;
-    }
-
-    .slide-caption {
-        font-size: 11px;
-        padding: 5px;
-    }
-
-    .slick-prev, 
-    .slick-next {
-        width: 30px;
-        height: 30px;
-    }
-
-    .slick-prev:before, 
-    .slick-next:before {
-        font-size: 20px;
-    }
-}
-
-/* Responsive Design for Contact Section */
-@media (max-width: 1024px) {
-    #contact {
-        padding: 50px 15px;
-        max-width: 90%;
-    }
-
-    #contact h2 {
-        font-size: 2.5em;
-    }
-
-    #contact h3 {
-        font-size: 1.6em;
-    }
-
-    #contact p, #contact p.location {
-        font-size: 1.1em;
-    }
-
-    .alert-success {
-        max-width: 90%;
-        font-size: 1em;
-    }
-
-    #contact ul {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 15px;
-    }
-
-    #contact ul li {
-        font-size: 1.1em;
-        padding: 12px;
-    }
-
-    #contact p.social-links {
-        gap: 15px;
-    }
-
-    #contact p.social-links a {
-        font-size: 1.1em;
-        padding: 8px 18px;
-    }
-
-    #contact form {
-        padding: 25px;
-        max-width: 90%;
-    }
-
-    #contact form label {
-        font-size: 1em;
-    }
-
-    #contact form input,
-    #contact form textarea {
-        font-size: 1em;
-        padding: 12px;
-    }
-
-    #contact form button[type="submit"] {
-        font-size: 1em;
-        padding: 12px 25px;
-    }
-
-    #contact iframe {
-        height: 350px;
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    #contact {
-        padding: 40px 10px;
-        max-width: 95%;
-    }
-
-    #contact h2 {
-        font-size: 2.2em;
-    }
-
-    #contact h3 {
-        font-size: 1.4em;
-    }
-
-    #contact p, #contact p.location {
-        font-size: 1em;
-    }
-
-    .alert-success {
-        max-width: 95%;
-        font-size: 0.9em;
-        padding: 15px;
-    }
-
-    #contact ul {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    #contact ul li {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    #contact p.social-links {
-        gap: 12px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #contact p.social-links a {
-        font-size: 1em;
-        padding: 8px 16px;
-        width: 100%;
-        max-width: 250px;
-        text-align: center;
-    }
-
-    #contact form {
-        padding: 20px;
-        max-width: 95%;
-    }
-
-    #contact form p {
-        margin-bottom: 25px;
-    }
-
-    #contact form label {
-        font-size: 0.9em;
-    }
-
-    #contact form input,
-    #contact form textarea {
-        font-size: 0.9em;
-        padding: 10px;
-    }
-
-    #contact form textarea {
-        min-height: 120px;
-    }
-
-    #contact form button[type="submit"] {
-        font-size: 0.9em;
-        padding: 10px 20px;
-    }
-
-    #contact iframe {
-        height: 300px;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    #contact {
-        padding: 30px 10px;
-        max-width: 100%;
-    }
-
-    #contact h2 {
-        font-size: 1.8em;
-    }
-
-    #contact h3 {
-        font-size: 1.2em;
-    }
-
-    #contact p, #contact p.location {
-        font-size: 0.9em;
-    }
-
-    .alert-success {
-        max-width: 100%;
-        font-size: 0.85em;
-        padding: 12px;
-    }
-
-    #contact ul {
-        gap: 10px;
-    }
-
-    #contact ul li {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    #contact ul li a::before {
-        font-size: 1em;
-    }
-
-    #contact p.social-links {
-        gap: 10px;
-    }
-
-    #contact p.social-links a {
-        font-size: 0.9em;
-        padding: 7px 14px;
-        max-width: 200px;
-    }
-
-    #contact p.social-links a::before {
-        font-size: 1em;
-    }
-
-    #contact form {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    #contact form p {
-        margin-bottom: 20px;
-    }
-
-    #contact form label {
-        font-size: 0.85em;
-        top: 12px;
-        left: 15px;
-    }
-
-    #contact form input:focus + label,
-    #contact form textarea:focus + label,
-    #contact form input:not(:placeholder-shown) + label,
-    #contact form textarea:not(:placeholder-shown) + label {
-        top: -10px;
-        font-size: 0.75em;
-    }
-
-    #contact form input,
-    #contact form textarea {
-        font-size: 0.85em;
-        padding: 8px;
-    }
-
-    #contact form textarea {
-        min-height: 100px;
-    }
-
-    #contact form button[type="submit"] {
-        font-size: 0.85em;
-        padding: 8px 16px;
-    }
-
-    #contact iframe {
-        height: 250px;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scaleIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes bounceIn {
-    0% { opacity: 0; transform: scale(0.3); }
-    50% { opacity: 1; transform: scale(1.05); }
-    70% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-}
-
-@keyframes zoomIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-
-/* ... পূর্ববর্তী CSS অপরিবর্তিত থাকবে, শুধু নিচের অংশ আপডেট হচ্ছে ... */
-
 /* All Projects Section */
 .all-projects .container {
     max-width: 1100px;
@@ -2416,122 +1726,337 @@ p
     box-shadow: 0 8px 20px rgba(0, 114, 255, 0.3);
 }
 
-/* Project Slider Styles */
-.project-slider {
-    width: 100%;
-    position: relative;
+/* -------------------------------------------- */
+/* Skills Section Styling (Used in home.html)   */
+/* -------------------------------------------- */
+/* This section styles the Skills dashboard on the home page (home.html). */
+/* Skill cards are styled to match project-box in both light and dark modes. */
+
+.skills-dashboard .container {
+    max-width: 1100px;
     margin: 0 auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 60px 20px;
 }
 
-.slider-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .slider-image {
-    transform: scale(1.05);
-}
-
-.slide {
-    text-align: center;
+.skills-dashboard {
+    padding: var(--section-padding);
+    margin: 40px auto;
+    max-width: 1000px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--shadow-color);
     position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
 }
 
-.slide-caption {
+.skills-dashboard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 114, 255, 0.2);
+}
+
+.skills-dashboard::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 8px;
-    font-size: 14px;
-    margin: 0;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 198, 255, 0.15) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
 }
 
-/* Slick Slider Customization */
-.slick-prev, 
-.slick-next {
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    transition: all 0.3s ease;
+.skills-dashboard h2 {
+    font-size: 2.8em;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideInLeft 0.8s ease-out;
 }
 
-.slick-prev:hover, 
-.slick-next:hover {
-    background: var(--primary);
+.skills-dashboard h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: var(--primary-gradient);
+    border-radius: 3px;
 }
 
-.slick-prev:before, 
-.slick-next:before {
-    color: white;
-    font-size: 24px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+    justify-items: center;
+    align-items: stretch;
+}
+/* Skill Card Styling */
+/* Matches project-box styling for consistency */
+.skill-card {
+    background: var(--card-bg); /* #ffffff in light, #16213e in dark */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 340px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: fadeInUp 1s ease-out 0.2s;
+    animation-fill-mode: backwards;
+    z-index: 1; /* Prevents overlap */
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 198, 255, 0.15) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 114, 255, 0.3);
+}
+
+.skill-card:hover::before {
     opacity: 1;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
 }
 
-.slick-prev:before {
-    content: '\f053';
+.skill-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
 }
 
-.slick-next:before {
-    content: '\f054';
-}
-
-.slick-prev {
-    left: 15px;
-}
-
-.slick-next {
-    right: 15px;
-}
-
-.slick-dots {
-    bottom: 10px;
-}
-
-.slick-dots li button:before {
-    color: white;
-    opacity: 0.5;
-    font-size: 10px;
-}
-
-.slick-dots li.slick-active button:before {
+.skill-icon {
+    font-size: 2.5em;
     color: var(--primary);
-    opacity: 1;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* Responsive Design for Project Links */
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-card h3 {
+    font-size: 1.5em;
+    color: var(--heading-color);
+    margin: 15px 0 10px;
+    font-family: var(--font-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.skill-card p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin: 0 0 15px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.proficiency {
+    margin-top: auto;
+    padding: 0 20px 20px;
+}
+
+.proficiency span {
+    font-size: 0.95em;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.progress-bar {
+    background: var(--border-color);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    background: var(--primary-gradient);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .skill-card {
+        max-width: 320px;
+        height: 380px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.4em;
+        margin: 12px 0 8px;
+    }
+
+    .skill-card p {
+        font-size: 0.95em;
+        margin: 0 0 12px;
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-dashboard {
+        padding: 40px 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .skill-card {
+        max-width: 300px;
+        height: 360px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.3em;
+        margin: 10px 0 6px;
+    }
+
+    .skill-card p {
+        font-size: 0.9em;
+        margin: 0 0 10px;
+        -webkit-line-clamp: 2;
+    }
+
+    .skill-icon {
+        font-size: 2em;
+    }
+
+    .proficiency span {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-dashboard h2 {
+        font-size: 2.2em;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skill-card {
+        max-width: 100%;
+        height: 340px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2em;
+        margin: 8px 0 5px;
+    }
+
+    .skill-card p {
+        font-size: 0.85em;
+        margin: 0 0 8px;
+    }
+
+    .skill-icon {
+        font-size: 1.8em;
+    }
+
+    .proficiency span {
+        font-size: 0.85em;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+}
+
+
+/* End of Skills Section Styling */
+/* -------------------------------------------- */
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .project-card {
-        max-width: 100%;
+    #projects .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .project-box {
+        max-width: 300px;
+        height: 360px;
+    }
+
+    .project-box img.slider-image {
+        height: 140px;
+    }
+
+    .project-box h3 {
+        font-size: 1.4em;
+        margin: 12px 15px 8px;
+    }
+
+    .project-box p {
+        font-size: 0.95em;
+        margin: 0 15px 12px;
+        -webkit-line-clamp: 2;
     }
 
     .project-links {
-        gap: 12px;
+        margin: 0 15px 15px;
     }
 
-    .all-projects .btn {
-        padding: 7px 16px;
-        font-size: 0.85em;
-        min-width: 90px;
+    .project-box .btn {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+
+    .see-all-btn .btn {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 
     .slider-image {
-        height: 180px;
+        height: 140px;
     }
 
     .slide-caption {
@@ -2540,25 +2065,155 @@ p
 }
 
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - var(--nav-height));
+        background: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: left 0.3s ease;
+        gap: 30px;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .navbar.scrolled {
+        height: var(--nav-height);
+    }
+
+    section, .project-box, .service-card, .about-section, .services-section, #customer-messages, #contact-replies {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto 40px;
     }
 
-    .project-links {
-        gap: 10px;
+    .project-card {
+        max-width: 100%;
+    }
+
+    h2, .about-text h2 {
+        font-size: 2.2em;
+    }
+
+    h3, .about-text h3 {
+        font-size: 1.5em;
+    }
+
+    p, .about-text p {
+        font-size: 1em;
+    }
+
+    #hero {
+        padding: 60px 20px;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text p.social-links a {
+        font-size: 1.1em;
+        padding: 8px 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-social {
         justify-content: center;
     }
 
-    .all-projects .btn {
-        padding: 6px 14px;
-        font-size: 0.8em;
-        min-width: 80px;
+    .contact-info p {
+        justify-content: center;
+    }
+
+    .footer-link:hover {
+        transform: none;
+    }
+
+    #projects .projects-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-box {
+        max-width: 100%;
+        min-width: 0;
+        height: 340px;
+    }
+
+    .project-box img.slider-image {
+        height: 130px;
+    }
+
+    .project-box h3 {
+        font-size: 1.3em;
+        margin: 10px 15px 6px;
+    }
+
+    .project-box p {
+        font-size: 0.9em;
+        margin: 0 15px 10px;
+        -webkit-line-clamp: 2;
+    }
+
+    .project-links {
+        margin: 0 15px 15px;
+    }
+
+    .project-box .btn {
+        padding: 7px 16px;
+        font-size: 0.85em;
+    }
+
+    .see-all-btn .btn {
+        padding: 8px 18px;
+        font-size: 0.95em;
     }
 
     .slider-image {
-        height: 160px;
+        height: 130px;
     }
 
     .slide-caption {
@@ -2574,19 +2229,94 @@ p
 }
 
 @media (max-width: 480px) {
-    .project-links {
-        gap: 8px;
-        flex-wrap: wrap; /* Allows wrapping if buttons are too large */
+    header h1 {
+        font-size: 2em;
     }
 
-    .all-projects .btn {
-        padding: 5px 12px;
-        font-size: 0.75em;
-        min-width: 70px;
+    section, .project-box, .service-card, .about-section, .services-section, #customer-messages, #contact-replies {
+        padding: 30px 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2, .about-text h2 {
+        font-size: 1.8em;
+    }
+
+    h3, .about-text h3 {
+        font-size: 1.3em;
+    }
+
+    p, .about-text p {
+        font-size: 0.9em;
+    }
+
+    #hero {
+        padding: 40px 15px;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    #hero h2 {
+        font-size: 1.3em;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text p.social-links a {
+        font-size: 1em;
+        padding: 7px 12px;
+    }
+
+    #projects .projects-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .project-box {
+        max-width: 100%;
+        min-width: 0;
+        height: 320px;
+    }
+
+    .project-box img.slider-image {
+        height: 120px;
+    }
+
+    .project-box h3 {
+        font-size: 1.2em;
+        margin: 8px 12px 5px;
+    }
+
+    .project-box p {
+        font-size: 0.85em;
+        margin: 0 12px 8px;
+        -webkit-line-clamp: 2;
+    }
+
+    .project-links {
+        margin: 0 12px 12px;
+    }
+
+    .project-box .btn {
+        padding: 6px 14px;
+        font-size: 0.8em;
+    }
+
+    .see-all-btn .btn {
+        padding: 7px 16px;
+        font-size: 0.9em;
     }
 
     .slider-image {
-        height: 140px;
+        height: 120px;
     }
 
     .slide-caption {
@@ -2606,193 +2336,207 @@ p
     }
 }
 
-/* ... বাকি CSS অপরিবর্তিত থাকবে ... */
+/* Responsive Design for Contact Section */
+@media (max-width: 1024px) {
+    #contact {
+        padding: 50px 15px;
+        max-width: 90%;
+    }
 
+    #contact h2 {
+        font-size: 2.5em;
+    }
 
-/* ... আপনার পূর্ববর্তী CSS অক্ষত থাকবে, নিচে শুধু skills-dashboard যোগ হচ্ছে ... */
-/* Skills Dashboard */
-/* ... Previous CSS remains unchanged ... */
+    #contact h3 {
+        font-size: 1.6em;
+    }
 
-/* -------------------------------------------- */
-/* Skills Section Styling (Used in home.html)   */
-/* -------------------------------------------- */
-/* This section styles the Skills dashboard on the home page (home.html). */
-/* It includes the container, grid layout, and individual skill cards.     */
-/* The skill cards are updated to match other cards in light mode, while    */
-/* retaining distinct styling in dark mode as requested.                  */
+    #contact p, #contact p.location {
+        font-size: 1.1em;
+    }
 
-.skills-dashboard .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px 80px;
+    .alert-success {
+        max-width: 90%;
+        font-size: 1em;
+    }
+
+    #contact ul {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    #contact ul li {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    #contact p.social-links {
+        gap: 15px;
+    }
+
+    #contact p.social-links a {
+        font-size: 1.1em;
+        padding: 8px 18px;
+    }
+
+    #contact form {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    #contact form label {
+        font-size: 1em;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    #contact form button[type="submit"] {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+
+    #contact iframe {
+        height: 350px;
+        max-width: 90%;
+    }
 }
 
-.skills-dashboard {
-    padding-bottom: 100px;
-    margin-bottom: 0;
-}
-
-.skills-dashboard h2 {
-    font-size: 2.5em;
-    color: #7d4adb; /* Custom color for Skills heading */
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.skills-dashboard h2::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(to right, #0072ff, #00c6ff);
-    border-radius: 2px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; /* Ensuring gap between cards */
-    margin-bottom: 100px;
-    align-items: stretch;
-}
-
-/* Skill Card Styling */
-/* Updated to use theme variables for consistency with other cards in light mode */
-.skill-card {
-    background: var(--card-bg); /* Matches project-box, service-card in light mode (#ffffff) and dark mode (#16213e) */
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 30px var(--shadow-color); /* Consistent shadow with other cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    box-sizing: border-box; /* Ensure padding doesn't affect card size */
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 114, 255, 0.2);
-}
-
-.skill-icon {
-    font-size: 2em;
-    color: var(--primary); /* Uses theme primary color (#0072ff in light, #00c6ff in dark) */
-    margin-bottom: 10px;
-}
-
-.skill-card h3 {
-    font-size: 1.4em;
-    color: var(--heading-color); /* Matches other cards (light: #222222, dark: #ffffff) */
-    margin: 8px 0;
-}
-
-.skill-card p {
-    font-size: 1em;
-    color: var(--text-color); /* Matches other cards (light: #333333, dark: #e0e0e0) */
-    line-height: 1.6;
-    margin-bottom: auto;
-}
-
-.proficiency {
-    margin-top: auto;
-}
-
-.proficiency span {
-    font-size: 0.9em;
-    color: var(--text-color); /* Matches other cards (light: #333333, dark: #e0e0e0) */
-    margin-bottom: 5px;
-    display: block; /* Ensure span doesn't collapse */
-}
-
-.progress-bar {
-    background: var(--border-color); /* Matches theme border (light: #e0e0e0, dark: #2a3a5a) */
-    border-radius: 10px;
-    height: 8px;
-    overflow: hidden;
-}
-
-.progress {
-    background: linear-gradient(to right, #0072ff, #00c6ff); /* Retains gradient as specified */
-    height: 100%;
-    transition: width 0.5s ease;
-}
-
-/* Dark Mode Specific Styling for skill-card */
-/* Retains the distinct styling in dark mode as requested */
-body:not(.light-mode) .skill-card {
-    background: #fff; /* Distinct white background in dark mode */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Distinct shadow in dark mode */
-}
-
-body:not(.light-mode) .skill-card h3 {
-    color: #333; /* Distinct dark gray heading color in dark mode */
-}
-
-body:not(.light-mode) .skill-card p,
-body:not(.light-mode) .proficiency span {
-    color: #666; /* Distinct medium gray text color in dark mode */
-}
-
-body:not(.light-mode) .progress-bar {
-    background: #e0e0e0; /* Distinct light gray for progress bar in dark mode */
-}
-
-/* Responsive Design for Skills Section */
 @media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-        gap: 20px; /* Maintain gap in smaller screens */
+    #contact {
+        padding: 40px 10px;
+        max-width: 95%;
     }
 
-    .skill-card h3 {
-        font-size: 1.3em;
+    #contact h2 {
+        font-size: 2.2em;
     }
 
-    .skill-card p {
+    #contact h3 {
+        font-size: 1.4em;
+    }
+
+    #contact p, #contact p.location {
+        font-size: 1em;
+    }
+
+    .alert-success {
+        max-width: 95%;
         font-size: 0.95em;
     }
 
-    .skill-icon {
-        font-size: 1.8em;
+    #contact ul {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    #contact ul li {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    #contact p.social-links {
+        gap: 12px;
+    }
+
+    #contact p.social-links a {
+        font-size: 1em;
+        padding: 7px 15px;
+    }
+
+    #contact form {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    #contact form label {
+        font-size: 0.95em;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    #contact form button[type="submit"] {
+        font-size: 0.95em;
+        padding: 10px 20px;
+    }
+
+    #contact iframe {
+        height: 300px;
+        max-width: 95%;
     }
 }
 
 @media (max-width: 480px) {
-    .skills-dashboard h2 {
-        font-size: 2em;
+    #contact {
+        padding: 30px 8px;
+        max-width: 100%;
     }
 
-    .skill-card {
-        padding: 15px;
+    #contact h2 {
+        font-size: 1.8em;
     }
 
-    .skill-card h3 {
+    #contact h3 {
         font-size: 1.2em;
     }
 
-    .skill-card p {
+    #contact p, #contact p.location {
         font-size: 0.9em;
     }
 
-    .skill-icon {
-        font-size: 1.5em;
+    .alert-success {
+        max-width: 100%;
+        font-size: 0.9em;
+        padding: 15px;
     }
 
-    .proficiency span {
-        font-size: 0.85em;
+    #contact ul {
+        gap: 10px;
+    }
+
+    #contact ul li {
+        font-size: 0.95em;
+        padding: 8px;
+    }
+
+    #contact p.social-links {
+        gap: 10px;
+    }
+
+    #contact p.social-links a {
+        font-size: 0.95em;
+        padding: 6px 12px;
+    }
+
+    #contact form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    #contact form label {
+        font-size: 0.9em;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    #contact form button[type="submit"] {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    #contact iframe {
+        height: 250px;
+        max-width: 100%;
     }
 }
-
-/* End of Skills Section Styling */
-/* -------------------------------------------- */
-
-/* ... Rest of your CSS remains unchanged ... */

@@ -10,18 +10,18 @@
     </header>
 {% endblock %}
 
-
 <!-- Hero Section -->
 <section id="hero">
-    <img src="{% static 'img\mypic.jpg.jpg' %}" alt="Nazmul's Profile Picture" class="profile-img">
+    <img src="{% static 'img/mypic.jpg.jpg' %}" alt="Nazmul's Profile Picture" class="profile-img">
     <h1>Hi, I'm Nazmul</h1>
     <h2>Full-Stack Web Developer</h2>
     <p>I build modern and scalable web applications with Django & React.</p>
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="{% static 'img\nazmul13.pdf' %}" class="btn" download>Download CV</a>
+    <div class="button-group">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="{% static 'img/nazmul13.pdf' %}" class="btn" download>Download CV</a>
+    </div>
 </section>
 
-<!-- Skills / Services Section -->
 <!-- Skills / Services Section -->
 <section class="skills-dashboard" id="skills">
     <div class="container">
@@ -29,13 +29,17 @@
         <div class="skills-grid">
             {% for skill in skills %}
             <div class="skill-card">
-                <div class="skill-icon">{{ skill.icon|safe }}</div>
-                <h3>{{ skill.name }}</h3>
-                <p>{{ skill.description|default:"No description" }}</p>
-                <div class="proficiency">
-                    <span>proficiency: {{ skill.proficiency }}%</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: {{ skill.proficiency }}%;"></div>
+                <div class="skill-content">
+                    <!-- Skill icon, styled like project imagery -->
+                    <div class="skill-icon">{{ skill.icon|safe }}</div>
+                    <h3>{{ skill.name }}</h3>
+                    <p>{{ skill.description|default:"No description" }}</p>
+                    <!-- Proficiency bar styled consistently -->
+                    <div class="proficiency">
+                        <span>Proficiency: {{ skill.proficiency }}%</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: {{ skill.proficiency }}%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,8 +117,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <!-- Include custom JS -->
-
-
 <script> 
     document.addEventListener('DOMContentLoaded', function() {
         // Initialize all project sliders
@@ -148,5 +150,4 @@
         );
     });
 </script>
-
 {% endblock %}
